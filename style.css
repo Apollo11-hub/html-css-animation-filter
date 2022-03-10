@@ -183,24 +183,77 @@
     position: absolute;
     top: -10px;
     left: 10%;
-    background: #f5f5f5;
+    background: #df0404;
     width: 60px;
     height: 20px;
+    animation-name: trick-move;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
 }
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
     right: 20%;
-    background: #f5f5f5;
+    background: #000000;
     width: 60px;
     height: 20px;
+    animation-name: trick-move;
+    animation-duration: 1s;
+    animation-timing-function:linear ;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-play-state: running;
 }
 
 
+@keyframes trick-move{
+    from{left: calc(0% - 00px);}
+    to{left: calc(100% - 60px);}
+    }
 
 
 
 
+/* .ex-13-bottom-white{
+    animation-name: around-the-button;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    /* animation-play-state: running; */
+} */
 
+.ex-13-top-white .around-button{
+    animation-name: around-the-button;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation-play-state: running; */
+}
 
-
+@keyframes around-the-button{
+    0%{
+        top: 0;
+        left: 0;
+        background-color: red;
+    }
+    25%{
+        top: -10px;
+        left: calc(100% - 40px);
+    }
+    50%{
+        top: calc(100% - 40px);
+        left: calc(100% - 40px);
+    /* }
+    75%{
+        top: calc(100% - 60px);
+        left: 0;
+    }
+    100%{
+        top: 0;
+        left: 0;
+    }
+}
+ */
